@@ -1,0 +1,9 @@
+#include "matrix.hh"
+
+using std::cout;
+
+int main(void)
+{
+  Matrix U;
+  cout<<U;
+}
