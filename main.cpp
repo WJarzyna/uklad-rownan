@@ -1,13 +1,16 @@
-#include "matrix.hh"
+#include "lineq.hh"
 
 using std::cout;
+using std::cin;
 
 int main(void)
 {
-  Matrix U;
-  U[0][2]=3;
-  U[1][0]=2;
-  U[2][1]=1;
-  cout<<U<<'\n';
-  cout<<det_sar(U);
+  lin_eq arr;
+  cin>>arr.set_mat()>>arr.set_free();
+  cout<<arr;
+  if(!arr.solve())cout<<"Brak rozwiazan"<<'\n';
+  else
+    {
+      cout<<"Rozwiazanie: "<<arr.get_sol()<<'\n'<<"Dl. wektora bledu: "<<arr.err()<<'\n';
+    }
 }

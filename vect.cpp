@@ -10,13 +10,13 @@ std::ostream& operator << (std::ostream &str, const Vector &V)
   for(int i=0; i<SIZE; i++) str<<V[i]<<' ';
   return str;
 }
-/*
-std::istream& operator >> (std::ostream &str, Vector &V)
+
+std::istream& operator >> (std::istream &str, Vector &V)
 {
   for(int i=0; i<SIZE; i++) str>>V[i];
   return str;
 }
-*/
+
 
 Vector operator + (const Vector A, const Vector B)
 {
@@ -52,4 +52,9 @@ Vector operator / (const Vector A, const double div)
   Vector val;
   for (int i=0;i<SIZE;i++)  val[i]=A[i]/div;
   return val;
+}
+
+double len(const Vector A)
+{
+  return sqrt(A*A);
 }
