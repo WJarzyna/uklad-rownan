@@ -49,6 +49,12 @@ double operator * (const Vector A, const Vector B)
   
 Vector operator / (const Vector A, const double div)
 {
+  if(div==0)
+    {
+      std::cerr<<"dzielenie przez 0";
+      exit(-1);
+    }
+  
   Vector val;
   for (int i=0;i<SIZE;i++)  val[i]=A[i]/div;
   return val;
