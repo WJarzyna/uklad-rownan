@@ -11,6 +11,9 @@ int main(void)
   if(!arr.solve())cout<<"Brak rozwiazan"<<'\n';
   else
     {
-      cout<<"Rozwiazanie: "<<arr.get_sol()<<'\n'<<"Dl. wektora bledu: "<<arr.err()<<'\n';
+      cout<<"Rozwiazanie: "<<arr.get_sol()<<'\n';
+      cout<<"Wektor bledu: "<<arr.err()<<'\n';
+      cout<<"Dl. wekt. bledu: "<<len(arr.err())<<'\n';
+      
     }
 }

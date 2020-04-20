@@ -1,5 +1,6 @@
 #include "lineq.hh"
 
+
 bool lin_eq::solve()
 {
   double main_det=det_sar(mat);
@@ -10,6 +11,7 @@ bool lin_eq::solve()
     {
       Matrix matx=mat;
       matx.colswap(i, free);
+      
       solution[i]=det_sar(matx)/main_det;
     }
   return true;

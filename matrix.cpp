@@ -43,7 +43,7 @@ Vector operator * (const Matrix A, const Vector X)
   for (int i=0; i<SIZE; i++)
     {
       double res=0;
-      for (int j=0; j<SIZE; j++)res+=A[i][j]*X[j];
+      for (int j=0; j<SIZE; j++)res+=A[j][i]*X[j];
       result[i]=res;
     }
   return result;
